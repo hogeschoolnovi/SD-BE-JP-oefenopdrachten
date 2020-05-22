@@ -15,12 +15,12 @@ import java.util.List;
  *
  * Wanneer er wel drie getallen in zijn:
  * Return het volgende:
- * "Het hoogste getal van de gegeven getallen is: %GETAL%"
+ * Een list met getallen gesorteerd van laag naar hoog.
  *
- * Je hier geen Collections.sort of java.streams gebruiken.
+ * Je mag hier geen Collections.sort of java.streams gebruiken.
  *
  */
-public class HoogsteGetal {
+public class SorteerLijst {
 
     public static void main(String[] argeblabla) {
 
