@@ -23,11 +23,11 @@ public class GeheimeCode {
         /*
         Opdracht 2: La Resistance wil niet dat de lijst met namen zo in handen komt te vallen van de bezetter. Versleutel
         Maak een methode die de lijst op de volgende manier versleuteld:
-        a) Verander elke letter naar het nummer in het alfabet. Dus a wordt 1, b wordt 2 et cetera.
+        a) Verander elke letter naar het nummer in het alfabet. Voeg na elke veranderde letter een - toe
+        (behalve de laatste). Dus a wordt 1, b wordt 2 et cetera.
         Wanneer een letter een hoofdletter is, moet je beginnen met tellen bij 100. Dus A wordt 101, B wordt 102.
-        Voorbeeld: Alex wordt versleuteld naar: 10112524
+        Voorbeeld: Alex wordt versleuteld naar: 101-12-5-24
         b) Als de positie in de lijst een even getal is, dan moet de cijfercombinatie omgedraaid worden.
-        c) Als de positie in de lijst een onevengetal is, dan wordt het getal met 112 verminderd.
          */
 
         /*

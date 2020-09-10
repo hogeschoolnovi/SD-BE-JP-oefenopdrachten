@@ -1,9 +1,9 @@
-package nl.novi.uitleg;
+package nl.novi.opdrachten.lijsten;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class UitlegList {
+public class ListOefening {
 
     public static void main(String[] uitlegList) {
 
@@ -40,6 +40,8 @@ public class UitlegList {
         // Vraag 4: Kun je hetzelfde doen als hierboven, maar PSV moet dan laatste zijn.
         clubNames.add("Zlotty FC");
         clubNames.add("SC Eindhoven");
+
+
 
     }
 

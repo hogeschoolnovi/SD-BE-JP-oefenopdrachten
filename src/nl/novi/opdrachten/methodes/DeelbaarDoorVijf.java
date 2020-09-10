@@ -12,6 +12,4 @@ public class DeelbaarDoorVijf {
     public static void main(String[] sammieKijkOmhoog) {
         int chosenNumber = 44;
     }
-
-
 }
