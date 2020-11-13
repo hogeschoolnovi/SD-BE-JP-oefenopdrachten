@@ -20,6 +20,12 @@ public class GeheimeCode {
          er alleen unieke namen in voor mogen komen.
          */
 
+        List<String> encryptedNames = encryptList(laResistanceMembers);
+        for (String name : encryptedNames) {
+            System.out.println(name);
+        }
+
+
         /*
         Opdracht 2: La Resistance wil niet dat de lijst met namen zo in handen komt te vallen van de bezetter. Versleutel
         Maak een methode die de lijst op de volgende manier versleuteld:
@@ -39,7 +45,65 @@ public class GeheimeCode {
          */
     }
 
+    private static List<String> encryptList(List<String> laResistanceMembers) {
+
+        List<String> encryptedNames = new ArrayList<>();
+
+        for (int i = 0; i < laResistanceMembers.size(); i++) {
+            if(i % 2 == 0) { // Hier is de i even. Dus even positie
+                String encryptedName = encryptName(laResistanceMembers.get(i));
+                String[] nameArray = encryptedName.split("-");
+                String[] reversedNameArray = reverse(nameArray, nameArray.length);
+
+                String reversedName = String.join("-", reversedNameArray);
+                encryptedNames.add(reversedName);
+
+            } else {
+                encryptedNames.add(encryptName(laResistanceMembers.get(i)));
+            }
+        }
+        return encryptedNames;
+    }
+
+    private static String encryptName(String name) {
+        String encryptedName = "";
+
+        for (int i = 0; i < name.length(); i++) { // Bij Arie is de waarde van name.length 4
+            char ch = name.charAt(i);
+
+            encryptedName = encryptedName + charToNumber(ch);
+
+            if(i != name.length() - 1) { // i != 4
+                encryptedName = encryptedName + "-";
+            }
+        }
+
+        return encryptedName;
+    }
+
+
+
     private static void addMembers(List<String> members, String name) {
         members.add(name);
+    }
+
+    private static String charToNumber(char ch) {
+        char tempchar = Character.toLowerCase(ch);
+        int number = tempchar - 'a' + 1;
+
+        if(Character.isUpperCase(ch)) {
+            number = number + 100;
+        }
+        return Integer.toString(number);
+    }
+
+    private static String[] reverse(String a[], int n) {
+        String[] b = new String[n];
+        int j = n;
+        for (int i = 0; i < n; i++) {
+            b[j - 1] = a[i];
+            j = j - 1;
+        }
+        return b;
     }
 }
