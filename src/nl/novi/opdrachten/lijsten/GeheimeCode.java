@@ -55,7 +55,8 @@ public class GeheimeCode {
         return members;
     }
 
-    private static List<String> encryptList (List<String> members) {
+    // Made public for VersleutelNamenLijst
+    public static List<String> encryptList (List<String> members) {
         List<String> encryptedList = new ArrayList<>();
 
         for(String member : members) {
