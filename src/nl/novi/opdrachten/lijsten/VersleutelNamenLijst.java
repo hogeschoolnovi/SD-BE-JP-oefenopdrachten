@@ -17,7 +17,8 @@ public class VersleutelNamenLijst {
      *
      */
 
-    // Deze methode gebruikt de FileReader class uit de helper package om het bestand "verzetsleden.txt" uit te lezen.
+    // Deze methode gebruikt de FileReader class uit de uitleg.week2.io package (voor het gemak hier opnieuw opgeschreven in de FileReader class in de helper package)
+    // om het bestand "verzetsleden.txt" uit te lezen.
     // Vervolgens wordt de GeheimeCode klasse gebruikt om de namen te encrypten.
     public static void main(String[] args) throws IOException {
         List<String> names = FileReader.readFile(FILE_LOCATION);

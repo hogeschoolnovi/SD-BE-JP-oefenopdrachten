@@ -38,11 +38,23 @@ public class SorteerLijst {
     }
 
     public static String sortList(List<Integer> numbers) {
+        // Dit is het eerste gedeelte van de opdracht.
+        // In het if-statement checkend we of de lengte van de lijst niet 3 is (! = not)
+        // als dat inderdaad niet zo is, dan returnen we de error-message
         if(numbers.size() != 3) {
             return "Er zijn te veel of te weinig getallen in de lijst.";
         }
+
+        // In de volgende twee if-statments checken we of de volgorde van de items in de lijst goed is.
+        // Als dat niet zo is, dan gebruiken we Collections.swap
+        // Alternatief kunnen we ook een derde variabele begruiken, zoals in de uitgecommentarieerde code
         if(numbers.get(0) > numbers.get(1)) {
             Collections.swap(numbers, 0, 1);
+            /*
+            Integer temp = numbers.get(0);
+            numbers.set(0, numbers.get(1));
+            numbers.set(1, temp);
+            */
         }
         if(numbers.get(1) > numbers.get(2)) {
             Collections.swap(numbers, 1, 2);
@@ -50,6 +62,8 @@ public class SorteerLijst {
                 Collections.swap(numbers, 0, 1);
             }
         }
+
+        // Als laatste gebruiken we hier een StringBuilder om de nummers uit de lijst naar een String om te zetten.
         StringBuilder stringBuilder = new StringBuilder();
         for (Integer i : numbers) {
             stringBuilder.append(i).append(" ");

@@ -33,12 +33,22 @@ public class Hoofdletters {
         customerNames.add("mo el-mecky");
         customerNames.add("fredje kadetje");
 
+        // Deze for-loop loopt door de ijst met namen heen.
+        // Je kunt hier ook een for-each loop gebruiken
         for (int i = 0; i < customerNames.size(); i++) {
             String tempName = customerNames.get(i);
 
+            // De String.split() methode, split de string op in losse deeltjes. In dit geval splitten we bij elke spatie.
+            // De String "hallo wereld" wordt de array ["hallo", "wereld"]
             String[] splitNames = tempName.split(" ");
+
+            // Deze for-loop loopt door de gesplitte array.
+            // Merk op dat we hier j gebruiken als loop-variabele, ipv i. Dit doen we omdat dit een "nested" loop is (een loop in een loop) en de naam "i" dus al bezet is.
             for (int j = 0; j < splitNames.length; j++) {
+                // Dit if statement is Bonus1, de inhoud is main opdracht
                 if(!isTussenVoegsel(splitNames[j])) {
+                    // We gebruiken hier substring en toUpperCase, zoals we in een eerdere opdracht ook al hebben gezien,
+                    // om de eerste letter van elk woordt naar een hoofdletter te veranderen.
                     String newName = splitNames[j].substring(0, 1).toUpperCase() + splitNames[j].substring(1);
                     splitNames[j] = newName;
                 }

@@ -34,16 +34,28 @@ public class DeelbaarDoorX {
     }
 
     private static String isDivisible(int number, int divisible) {
+        // Net als de DeelbaarDoorVijf opdracht, gebruiken we hier %
+        // We gebruiken nu echter de tweede parameter ipv 5
         if(number % divisible == 0) {
             return number + " is deelbaar door " + divisible;
         }
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Het getal ").append(number).append(" is niet deelbaar door: ").append(divisible)
-                .append(".\r\n");
 
+        // Hieronder wordt een StringBuilder gemaakt en gevuld met een eerste String.
+        StringBuilder stringBuilder = new StringBuilder();
+
+        stringBuilder.append("Het getal ");
+        stringBuilder.append(number);
+        stringBuilder.append(" is niet deelbaar door: ");
+        stringBuilder.append(divisible);
+        stringBuilder.append(".\r\n");
+
+        // Dit statement slaat de uitkomst van de remainder op in een variabele.
+        // Dat is dus wat overblijft als je het getal een aantal keer gedeeld hebt, maar niet meer verder kan delen.
         int restNumber = number % divisible;
+        // de uitkomst van rest/divisible geeft de fractie van number
         double deling = (double) restNumber/divisible;
 
+        // Hier wordt de uiteindelijk String nog toegevoegd aan de StringBuilder.
         if(deling < 0.50) {
             stringBuilder.append("Verlaag het getal met ").append(restNumber);
         } else {
