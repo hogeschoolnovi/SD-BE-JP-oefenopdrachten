@@ -9,6 +9,8 @@ public class Leeftijdscontrole {
         System.out.println("Wat is uw leeftijd?");
         int givenAge = userInputScanner.nextInt();
 
+        // We gebruiken hier een if else if else structuur met > (groter dan) om te checken wat de leeftijdscategorie is en daarbij de juiste tekst te printen.
+        // We kunnen dit if-statement ook herschrijven met <, in dat geval zou de volgorde van de branches omgedraaid moeten worden.
         if(givenAge > 25) {
             System.out.println("ij mag zonder restricties alcohol kopen.");
         } else if (givenAge > 18) {

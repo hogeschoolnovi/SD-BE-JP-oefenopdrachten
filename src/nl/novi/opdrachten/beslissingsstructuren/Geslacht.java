@@ -9,10 +9,13 @@ public class Geslacht {
         System.out.println("Wat is uw geslacht?");
         String geslacht = userInputScanner.nextLine();
 
+        // We gebruiken hier de "equalsIgnoreCase" methode van String. In tegen stelling tot de "equals" methode,
+        // maakt het bij deze methode niet uit of de gebruiker hoofdletters ergens in de string heeft of niet.
         if(geslacht.equalsIgnoreCase("man")) {
             System.out.println("Dag meneer.");
         } else if(geslacht.equalsIgnoreCase("vrouw")) {
-            System.out.println("Dag mevrouw.");        } else {
+            System.out.println("Dag mevrouw.");
+        } else {
             System.out.println("Dag persoon.");
         }
 

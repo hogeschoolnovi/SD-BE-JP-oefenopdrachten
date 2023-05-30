@@ -9,8 +9,11 @@ public class Korting {
         System.out.println("Wat is het aankoopbedrag?");
         double aankoopBedrag = userInputScanner.nextDouble();
 
+        // We definieren hier eerst een variabele van type String, waarin we het kortingspercentage opslaag a.d.h.v. het ingevulde aankoopbedrag.
         String korting;
 
+        // We maken een if else if else structuur, waarin we >= (groter dan of gelijk aan) gebruiken om te checken welke korting de klant krijgt.
+        // We kunnen dit if-statement ook herschrijven met >, < of <=, maar let er dan op dat je de (hardcoded) getallen uit de vergelijking dan wellicht ook moet aanpassen.
         if(aankoopBedrag >= 300.01) {
             korting = "16";
             aankoopBedrag = aankoopBedrag - aankoopBedrag * 0.16;
@@ -22,7 +25,10 @@ public class Korting {
             korting = "0";
         }
 
+        // Als laatst printen we de uitkomsten van onze berekening (korting en aankoopBedrag) uit in een mooie String
         System.out.println("De klant krijgt " + korting + "% korting. Het aankoopbedrag is nu: " + aankoopBedrag);
+
+
         /*
         Hierboven is het aankoopbedrag ingevoerd. Het is de bedoeling dat jij de korting bepaalt en het nieuwe bedrag
         uitrekent.
