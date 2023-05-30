@@ -1,5 +1,8 @@
 package nl.novi.uitleg.week2.debuggen;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 
 
@@ -19,12 +22,27 @@ public class Excepties {
     static char[] board;
 
     public static void main(String[] args) {
+        voorbeeldNullPointerException();
+        voorbeeldStringIndexOutOfBoundException();
         voorbeeldArthmeticException();
         voorbeeldArrayIndexOutOfBoundsException();
         voorbeeldFileNotFoundException();
-        voorbeeldIOException();
-        voorbeeldNullPointerException();
-        voorbeeldStringIndexOutOfBoundException();
+//        Haal de // bij onderstaande regel weg om de exceptie te gooien.
+        //voorbeeldIOException();
+    }
+
+    //Haal de // weg op de exceptie te fixen.
+    public static void voorbeeldNullPointerException() {
+        //board = new char[9];
+        System.out.println(board.length);
+    }
+
+    //Haal de // weg op de exceptie te fixen.
+    public static void voorbeeldStringIndexOutOfBoundException() {
+        String s = "aa";
+        //if(s.length() >= 77) {
+        s.charAt(77);
+        //}
     }
 
     //Haal de // weg op de exceptie te gooien.
@@ -38,8 +56,10 @@ public class Excepties {
         //System.out.println(nummer[4]);
     }
 
-    // Spreekt voor zich
+    //Haal de // weg om de exceptie te gooien.
+    //Je ziet dat de code dan meteen niet compiled, omdat FileNotFoundException geen RuntimeException is
     public static void voorbeeldFileNotFoundException() {
+//            FileReader fileReader = new FileReader("Test.txt");
 
     }
 
@@ -48,23 +68,13 @@ public class Excepties {
      * @throws IOException wanneer de code toegang probeert te krijgen tot een bestand dat
      * al in gebruik is of als het lezen of schrijven onverwacht onderbroken wordt.
      */
-    public static void voorbeeldIOException() {
+    public static void voorbeeldIOException() throws IOException{
 
     }
 
-    //Haal de // weg op de exceptie te fixen.
-    public static void voorbeeldNullPointerException() {
-        //board = new char[9];
-        System.out.println(board.length);
-    }
 
-    //Haal de // weg op de exceptie te fixen.
-    public static void voorbeeldStringIndexOutOfBoundException() {
-        String s = "aa";
-        //if(s.length() >= 77) {
-            s.charAt(77);
-        //}
-    }
+
+
 
 
 }
