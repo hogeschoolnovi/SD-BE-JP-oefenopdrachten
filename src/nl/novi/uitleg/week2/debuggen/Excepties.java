@@ -67,6 +67,7 @@ public class Excepties {
      *
      * @throws IOException wanneer de code toegang probeert te krijgen tot een bestand dat
      * al in gebruik is of als het lezen of schrijven onverwacht onderbroken wordt.
+     * Met het "throws" keyword, kun je de zorg voor het afhandelen van een exception afschuiven naar de aanroeper van de methode.
      */
     public static void voorbeeldIOException() throws IOException{
 
