@@ -17,7 +17,7 @@ public class ListOefening {
         clubNames.add("Fc Groningen");
         clubNames.add("FC Twente");
 
-        // Vraag -1: Maak een methode die al taak heeft om de list per regel uit te printen.
+        // Vraag -1: Maak een methode die als taak heeft om de list per regel uit te printen.
 
         // Vraag 0: Maak een methode die als taak heeft om de list uit te printen: positie + inhoud.
         // Bovenstaande list zou dan dit zijn:
